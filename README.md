@@ -1,37 +1,52 @@
 # To-Do List App
 
-![alt text](image-1.png)
+## 📋 Overview
+This To-Do List app is a Flutter-based project designed to help users efficiently manage their tasks. It offers functionality for adding tasks with optional location and image attachments, keeping task data organized with Firebase Firestore, and provides a seamless user experience with smooth navigation and state management using Provider.
 
-![alt text](image-2.png)
+## 🚀 Features
+- **Home Screen**: View your tasks in a clean, organized list format.
+- **Add Task**: Easily add tasks with a description, attach location, and images.
+- **Task Details**: View full details of tasks, including map locations and full-sized images.
+- **Task Management**: Mark tasks as completed, edit details, or delete tasks with a swipe.
+- **Persistent Storage**: Stores tasks using Firebase Firestore to keep data safe and accessible.
+- **State Management**: Efficient state handling with the Provider package.
+- **User-Friendly Design**: Simple, consistent UI for a smooth experience.
 
-## Overview
-This is a simple To-Do List application built using Flutter. The app allows users to create, view, and manage their tasks. It features location and image attachment for each task, with a clean and user-friendly interface.
+## 🛠️ Technologies Used
+- **Flutter**: For building the app's user interface.
+- **Firebase Firestore**: For storing and managing tasks data.
+- **Provider**: State management for handling the app's state.
 
-## Features
-- **Home Screen**: Displays a list of tasks. Shows a message when there are no tasks.
-- **Add Task Screen**: Users can add new tasks, attach their current location, and select images from their gallery.
-- **Task List**: Tasks are displayed in a ListView with options to mark as completed and delete.
-- **Task Details Screen**: View and edit task details, including full images and map locations.
-- **Task Storage**: All tasks are stored in Firebase Firestore for persistence.
-- **State Management**: Utilizes the Provider package for managing application state.
-- **Navigation**: Easy navigation between screens using Flutter's bottom navigation.
-- **Floating Action Button (FAB)**: Quick access to add new tasks.
-- **Clean UI Design**: Simple, consistent color scheme with proper spacing.
-
-## Technologies Used
-- **Flutter**: Framework for building the mobile application.
-- **Firebase**: Backend services for data storage (Firestore).
-- **Provider**: State management solution.
-
-## Installation
-1. **Clone the repository**:
+## 📲 Installation Instructions
+1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/todo_list_app.git
-   cd todo_list_app
-   ```
-2. **Install dependencies**:
-    flutter pug get
-3. **Must set Google Map API key**:
-    inside `android/app/src/main/AndroidManifest.xml`
-    inside application section please your API key.
-    Also add for IOS and web followe `pub.dev` search google maps flutter.
+   git clone https://github.com/SyedMuzamilShah/todo_list_gil_app.git
+   cd todo_list_gil_app
+2. **Install Dependencies:**
+    - flutter pub get
+3. **Set up Firebase:**
+    - Create a new Firebase project.
+    - Add your app's google-services.json to the android/app directory.
+    - Enable Firestore in your Firebase console.
+4. **Run the App:**
+    - flutter run
+
+## 🚀 Usage Guide
+- **Add Task**: Use the floating action button (FAB) to quickly add tasks with descriptions, locations, and images.
+- **View Details**: Tap on a task to see its full details.
+- **Edit and Manage**: Swipe to delete tasks or mark them as completed.
+
+## ⚠️ Troubleshooting
+- **Firebase Issues**: Ensure your `google-services.json` is correctly placed and your Firebase project is properly configured.
+- **Google Map issues**: Must insert the KEY follow `google_maps_flutter_web: ^0.5.10` and `google_maps_flutter: ^2.9.0` instraction to add properly google maps in your project.
+- **Dependencie**: Run `flutter pub get` to resolve any package issues.
+
+## 🤝 Contributions
+- We welcome contributions! Feel free to fork the repository, submit issues, or create pull requests to improve the app.
+
+## 📄 License
+- This project is licensed under the MIT License.
+
+## 📸 Screenshots
+![alt text](<Screenshot 2024-10-19 210400.png>)
+![alt text](<Screenshot 2024-10-19 210218.png>)

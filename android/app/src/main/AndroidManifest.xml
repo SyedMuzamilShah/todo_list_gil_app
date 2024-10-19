@@ -5,6 +5,9 @@
         android:label="todo_list_gil_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <!-- PAST YOUR GOOGLE MAP API KEY HERE -->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value=""/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
