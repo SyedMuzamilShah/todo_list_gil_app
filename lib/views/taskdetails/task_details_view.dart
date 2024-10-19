@@ -142,7 +142,7 @@ class TaskDetailsView extends StatelessWidget {
               // Display task time
 
               const SizedBox(
-                height: 500,
+                height: 400,
                 width: double.infinity,
                 child: GoogleMapView(),
               ),

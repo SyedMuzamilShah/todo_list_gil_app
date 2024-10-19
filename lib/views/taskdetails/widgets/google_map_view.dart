@@ -13,7 +13,9 @@ class GoogleMapView extends StatelessWidget {
     
     return Consumer<GoogleMapProvider>(
       builder: (_, provider, __){
+        provider.addMarker();
       return  GoogleMap(
+        markers: Set<Marker>.of(provider.markers),
         initialCameraPosition: provider.kLake,
         onMapCreated: (GoogleMapController controller){
           provider.controller.complete(controller);

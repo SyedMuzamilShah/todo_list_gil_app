@@ -59,12 +59,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: Consumer<MainProvider>(
         builder: (_, provider, __) {
           return provider.pages[provider.index];
         },
       ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          context.watch<MainProvider>().appBarTitle,),
+          centerTitle: true,
+      ),
       drawer: const MyDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: context.watch<MainProvider>().index,

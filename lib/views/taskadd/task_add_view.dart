@@ -33,10 +33,7 @@ class _TaskAddViewState extends State<TaskAddView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("A d d  T a s k"),
-        centerTitle: true,
-      ),
+      appBar: AppBar(),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -49,18 +46,18 @@ class _TaskAddViewState extends State<TaskAddView> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: TaskAddViewStyle.spaceing),
-          
-                      // Task Description Section
-                      Text(
-                        "Task Description",
-                        style: TaskAddViewStyle.textStyle(context)
-                      ),
-                      SizedBox(height: TaskAddViewStyle.spaceing),
+
                       Form(
                         key: _formKey,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            
+                                                  // Task Description Section
+                      Text(
+                        "Task Title",
+                        style: TaskAddViewStyle.textStyle(context)
+                      ),
+                      SizedBox(height: TaskAddViewStyle.spaceing),
                             TextFormField(
                               controller: taskTitle,
                               validator: (value) {
@@ -83,6 +80,12 @@ class _TaskAddViewState extends State<TaskAddView> {
                               ),
                             ),
                             const SizedBox(height: 20,),
+                                                  // Task Description Section
+                      Text(
+                        "Task description",
+                        style: TaskAddViewStyle.textStyle(context)
+                      ),
+                      SizedBox(height: TaskAddViewStyle.spaceing),
                             TextFormField(
                               controller: taskDescription,
                               validator: (value) {

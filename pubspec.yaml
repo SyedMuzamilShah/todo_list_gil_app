@@ -52,6 +52,8 @@ dependencies:
   # READ MORE SEE MORE OPTION
   readmore: ^3.0.0
 
+  location: ^7.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

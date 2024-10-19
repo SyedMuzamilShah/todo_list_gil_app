@@ -58,6 +58,7 @@ class CustomTodoListItem extends StatelessWidget {
                         title: Text(
                           todoData.taskName,
                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
                             decoration: todoData.isCompleted
                                 ? TextDecoration.lineThrough
                                 : TextDecoration.none,

@@ -13,10 +13,10 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("T O D O"),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   title: const Text("T O D O"),
+      //   centerTitle: true,
+      // ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
