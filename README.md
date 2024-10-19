@@ -24,3 +24,10 @@ This is a simple To-Do List application built using Flutter. The app allows user
    ```bash
    git clone https://github.com/yourusername/todo_list_app.git
    cd todo_list_app
+   ```
+2. **Install dependencies**:
+    flutter pug get
+3. **Must set Google Map API key**:
+    inside `android/app/src/main/AndroidManifest.xml`
+    inside application section please your API key.
+    Also add for IOS and web followe `pub.dev` search google maps flutter.
