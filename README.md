@@ -31,5 +31,3 @@ This is a simple To-Do List application built using Flutter. The app allows user
     inside `android/app/src/main/AndroidManifest.xml`
     inside application section please your API key.
     Also add for IOS and web followe `pub.dev` search google maps flutter.
-
-![alt text](image.png)
