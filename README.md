@@ -29,9 +29,16 @@ This To-Do List app is a Flutter-based project designed to help users efficientl
     - Create a new Firebase project.
     - Add your app's google-services.json to the android/app directory.
     - Enable Firestore in your Firebase console.
+4. **Set up Google Map Key:**
+    - Create google map key in your Google Maps console.
+    - Enable App integration in your Google Maps console
+    - Move into credentials section copy key
+    - visit to `pub.dev` website search `google_maps_flutter: ^2.9.0` follow instructions to set google map key properly.
 4. **Run the App:**
     ```bash
     flutter run
+
+## congratulations you run the app
 
 ## 🚀 Usage Guide
 - **Add Task**: Use the floating action button (FAB) to quickly add tasks with descriptions, locations, and images.
