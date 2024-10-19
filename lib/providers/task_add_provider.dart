@@ -37,9 +37,10 @@ class TaskAddProvider with ImageProperties, LocationProperties, ChangeNotifier {
     }
   }
 
-  Future<void> saveTaskToFirebase({
+  Future<bool> saveTaskToFirebase({
     required BuildContext context,
     required String taskDescription,
+    required String taskTitle,
   }) async {
     setSavingData(true);
 
@@ -49,7 +50,7 @@ class TaskAddProvider with ImageProperties, LocationProperties, ChangeNotifier {
     }
     // Create task model and save it to Firestore
     TaskModel taskData = TaskModel(
-      taskName: "Task 1",
+      taskName: taskTitle,
       description: taskDescription,
       imagePath: _firebaseImageUrl,
       location: _locationAddress,
@@ -72,8 +73,10 @@ class TaskAddProvider with ImageProperties, LocationProperties, ChangeNotifier {
 
     // Reset state after saving
     // And Update the UI
+
     _resetTaskData();
     _updateState();
+    return true;
   }
 
   // Helper method to upload the image to Firebase Storage

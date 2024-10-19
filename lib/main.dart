@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_list_gil_app/firebase_options.dart';
+import 'package:todo_list_gil_app/providers/google_map_provider.dart';
 import 'package:todo_list_gil_app/providers/home_provider.dart';
 import 'package:todo_list_gil_app/providers/main_provider.dart';
 import 'package:todo_list_gil_app/providers/task_add_provider.dart';
@@ -35,6 +36,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => HomeProvider()),
         ChangeNotifierProvider(create: (_) => TaskAddProvider()),
         ChangeNotifierProvider(create: (_) => Detailstaskprovider()),
+
+        // USED TO MANAGE GOOGLE MAP
+        ChangeNotifierProvider(create: (_) => GoogleMapProvider()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {

@@ -58,28 +58,55 @@ class _TaskAddViewState extends State<TaskAddView> {
                       SizedBox(height: TaskAddViewStyle.spaceing),
                       Form(
                         key: _formKey,
-                        child: TextFormField(
-                          controller: taskDescription,
-                          validator: (value) {
-                            if (value == null || value.trim().isEmpty) {
-                              return 'Please enter a task description.';
-                            }
-                            return null;
-                          },
-                          minLines: 5,
-                          maxLines: 10,
-                          keyboardType: TextInputType.multiline,
-                          decoration: const InputDecoration(
-                            hintText: 'Enter task description',
-                            hintStyle: TextStyle(color: Colors.grey),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                        child: Column(
+                          children: [
+                            
+                            TextFormField(
+                              controller: taskTitle,
+                              validator: (value) {
+                                if (value == null || value.trim().isEmpty) {
+                                  return 'Please enter a task name.';
+                                }
+                                return null;
+                              },
+                              keyboardType: TextInputType.name,
+                              decoration: const InputDecoration(
+                                hintText: 'Enter task Title',
+                                hintStyle: TextStyle(color: Colors.grey),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                                ),
+                                contentPadding: EdgeInsets.symmetric(
+                                  vertical: 16.0,
+                                  horizontal: 12.0,
+                                ),
+                              ),
                             ),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 16.0,
-                              horizontal: 12.0,
+                            const SizedBox(height: 20,),
+                            TextFormField(
+                              controller: taskDescription,
+                              validator: (value) {
+                                if (value == null || value.trim().isEmpty) {
+                                  return 'Please enter a task description.';
+                                }
+                                return null;
+                              },
+                              minLines: 5,
+                              maxLines: 10,
+                              keyboardType: TextInputType.multiline,
+                              decoration: const InputDecoration(
+                                hintText: 'Enter task description',
+                                hintStyle: TextStyle(color: Colors.grey),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                                ),
+                                contentPadding: EdgeInsets.symmetric(
+                                  vertical: 16.0,
+                                  horizontal: 12.0,
+                                ),
+                              ),
                             ),
-                          ),
+                          ],
                         ),
                       ),
                       SizedBox(height: TaskAddViewStyle.spaceing),
@@ -123,11 +150,15 @@ class _TaskAddViewState extends State<TaskAddView> {
                         child: CustomButton(
                           loading: provider.savingData,
                           buttonText: "Save Task",
-                          buttonFunction: () {
+                          buttonFunction: () async {
+                            FocusScope.of(context).unfocus();
                             if (_formKey.currentState!.validate()) {
-                              provider.saveTaskToFirebase(context: context, taskDescription: taskDescription.text);
-                              taskDescription.clear();
-                              FocusScope.of(context).unfocus();
+                              bool responce = await provider.saveTaskToFirebase(context: context, taskDescription: taskDescription.text, taskTitle: taskTitle.text);
+                              if (responce){
+                                taskDescription.clear();
+                                taskTitle.clear();
+
+                              }
                             }
                           },
                         ),

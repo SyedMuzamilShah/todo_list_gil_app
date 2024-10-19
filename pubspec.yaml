@@ -49,6 +49,9 @@ dependencies:
   # THAT PACKAGE USED FOR WEB
   google_maps_flutter_web: ^0.5.10
 
+  # READ MORE SEE MORE OPTION
+  readmore: ^3.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

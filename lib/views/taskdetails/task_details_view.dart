@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:readmore/readmore.dart';
 import 'package:todo_list_gil_app/helpers/time_converter.dart';
 import 'package:todo_list_gil_app/models/task_model.dart';
 import 'package:todo_list_gil_app/providers/task_details_provider.dart';
+import 'package:todo_list_gil_app/views/taskdetails/widgets/google_map_view.dart';
 
 class TaskDetailsView extends StatelessWidget {
   final TaskModel todoTask;
@@ -34,36 +36,34 @@ class TaskDetailsView extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(12),
-
-                      child: providerInstance.imagePreview != null ?
-                       Image.memory(providerInstance.imagePreview!) : 
-                       Image.network(
-                        todoTask.imagePath!,
-                        width: double.infinity,
-                        height: 200,
-                        fit: BoxFit.cover,
-                      ),
+                      child: providerInstance.imagePreview != null
+                          ? Image.memory(providerInstance.imagePreview!)
+                          : Image.network(
+                              todoTask.imagePath!,
+                              width: double.infinity,
+                              height: 300,
+                              fit: BoxFit.scaleDown,
+                            ),
                     ),
-
                     Positioned(
-                  top: 8,
-                  right: 8,
-                  child: InkWell(
-                    onTap: () => providerInstance.pickImageFromGallery(),
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.black54,
-                        shape: BoxShape.circle,
-                      ),
-                      padding: const EdgeInsets.all(4),
-                      child: const Icon(
-                        Icons.edit,
-                        color: Colors.white,
-                        size: 20,
+                      top: 8,
+                      right: 8,
+                      child: InkWell(
+                        onTap: () => providerInstance.pickImageFromGallery(),
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: Colors.black54,
+                            shape: BoxShape.circle,
+                          ),
+                          padding: const EdgeInsets.all(4),
+                          child: const Icon(
+                            Icons.edit,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
-                ),
                   ],
                 )
               else
@@ -94,9 +94,16 @@ class TaskDetailsView extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               // Display task description
-              Text(
+
+              ReadMoreText(
                 todoTask.description,
-                style: const TextStyle(fontSize: 16),
+                trimMode: TrimMode.Line,
+                trimLines: 2,
+                colorClickableText: Colors.pink,
+                trimCollapsedText: 'Show more',
+                trimExpandedText: 'Show less',
+                moreStyle:
+                    const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 16),
               // Display task status
@@ -133,6 +140,13 @@ class TaskDetailsView extends StatelessWidget {
                 ),
               const SizedBox(height: 16),
               // Display task time
+
+              const SizedBox(
+                height: 500,
+                width: double.infinity,
+                child: GoogleMapView(),
+              ),
+              const SizedBox(height: 16),
               Row(
                 children: [
                   const Icon(Icons.access_time),
