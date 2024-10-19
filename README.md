@@ -23,13 +23,15 @@ This To-Do List app is a Flutter-based project designed to help users efficientl
    git clone https://github.com/SyedMuzamilShah/todo_list_gil_app.git
    cd todo_list_gil_app
 2. **Install Dependencies:**
-    - flutter pub get
+    ```bash
+    flutter pub get
 3. **Set up Firebase:**
     - Create a new Firebase project.
     - Add your app's google-services.json to the android/app directory.
     - Enable Firestore in your Firebase console.
 4. **Run the App:**
-    - flutter run
+    ```bash
+    flutter run
 
 ## 🚀 Usage Guide
 - **Add Task**: Use the floating action button (FAB) to quickly add tasks with descriptions, locations, and images.
