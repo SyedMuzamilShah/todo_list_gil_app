@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "962204222268",
+    "project_id": "gil-todo-app",
+    "storage_bucket": "gil-todo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962204222268:android:3055dc2b8baeac37439439",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP9bTMxHtJXjLFqUncUNcp1jcGi6b07-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962204222268:android:7ac94bc0cf642a34439439",
+        "android_client_info": {
+          "package_name": "com.example.gil_todo_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP9bTMxHtJXjLFqUncUNcp1jcGi6b07-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962204222268:android:d4134098852ed832439439",
+        "android_client_info": {
+          "package_name": "com.example.todo_list_gil_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP9bTMxHtJXjLFqUncUNcp1jcGi6b07-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962204222268:android:108ee268b8a2b2b0439439",
+        "android_client_info": {
+          "package_name": "com.syedmuzamilshah.todo_list_gil_ap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP9bTMxHtJXjLFqUncUNcp1jcGi6b07-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962204222268:android:c2a67a221af01b5b439439",
+        "android_client_info": {
+          "package_name": "com.syedmuzamilshah.todo_list_gil_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP9bTMxHtJXjLFqUncUNcp1jcGi6b07-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
